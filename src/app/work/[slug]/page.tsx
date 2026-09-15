@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +18,60 @@ export async function generateStaticParams() {
     });
   });
   return allProjects;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
+
+  let project: ProjectItem | undefined;
+  PORTFOLIO_CATEGORIES.forEach((cat) => {
+    cat.projects.forEach((p) => {
+      if (p.slug === slug || p.id === slug) {
+        project = p;
+      }
+    });
+  });
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  const baseUrl = "https://abhishekportfolio.com";
+  const canonicalUrl = `${baseUrl}/work/${project.slug}`;
+
+  return {
+    title: `${project.title} — ${project.category}`,
+    description: project.subtitle || project.content?.overview || project.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${project.title} — ${project.category}`,
+      description: project.subtitle || project.description,
+      url: canonicalUrl,
+      siteName: "Abhishek Portfolio",
+      images: [
+        {
+          url: project.image,
+          alt: project.title,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — ${project.category}`,
+      description: project.subtitle || project.description,
+      images: [project.image],
+    },
+  };
 }
 
 export default async function ProjectPage({
@@ -55,8 +110,37 @@ export default async function ProjectPage({
     ...(project.content?.gallery || []),
   ].filter((url, idx, self) => Boolean(url) && self.indexOf(url) === idx);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://abhishekportfolio.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Work",
+        "item": "https://abhishekportfolio.com/#work",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": project.title,
+        "item": `https://abhishekportfolio.com/work/${project.slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#F7F7F3] text-[#111111]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
 
       {/* TOP HERO CONTAINER */}
