@@ -27,13 +27,14 @@ export default function SelectedWork() {
   // Interactive preview state for RISE Creative Card
   const [risePreviewIndex, setRisePreviewIndex] = useState(0);
   const risePreviewImages = [
+    "/rise-creative-branding/rise-logo-2.png",
     "/rise-creative-branding/main-logo.png",
     "/rise-creative-branding/brand-identity.png",
     "/rise-creative-branding/ad-design-1.png",
     "/rise-creative-branding/ad-design-2.png",
     "/rise-creative-branding/rise-logo.png",
   ];
-  const currentRiseImage = risePreviewImages[risePreviewIndex] || riseProject?.image || "/rise-creative-branding/main-logo.png";
+  const currentRiseImage = risePreviewImages[risePreviewIndex] || riseProject?.image || "/rise-creative-branding/rise-logo-2.png";
 
   return (
     <section id="work" className="py-24 bg-[#F7F7F3] border-b border-[#E5E5E0]">

@@ -229,7 +229,7 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
         title: "RISE Creative Brand Identity",
         subtitle: "Full logo system, visual identity architecture & brand guidelines",
         category: "Branding & Identity",
-        image: "/rise-creative-branding/main-logo.png",
+        image: "/rise-creative-branding/rise-logo-2.png",
         description: "Complete visual identity system for RISE Creative including primary logo mark, color system, typography guidelines, and brand collaterals.",
         client: "RISE Creative",
         year: "2025",
@@ -244,13 +244,13 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
           solution: "Engineered a bold geometric logo lockup paired with vibrant warm gradient accents, strong modern typography grids, and modular advertising design templates.",
           keyTakeaway: "A unified visual identity system builds instant brand recognition and enhances campaign conversion across all customer touchpoints.",
           gallery: [
+            "/rise-creative-branding/rise-logo-2.png",
             "/rise-creative-branding/main-logo.png",
             "/rise-creative-branding/brand-identity.png",
             "/rise-creative-branding/ad-design-1.png",
             "/rise-creative-branding/ad-design-2.png",
             "/rise-creative-branding/ad-design-3.png",
-            "/rise-creative-branding/rise-logo.png",
-            "/rise-creative-branding/rise-logo-2.png"
+            "/rise-creative-branding/rise-logo.png"
           ],
           metrics: [
             { label: "Brand Recognition", value: "+185%" },
