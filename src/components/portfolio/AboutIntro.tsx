@@ -59,7 +59,7 @@ export default function AboutIntro() {
         <div className="flex flex-col items-start mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E5E5E0] shadow-xs mb-4">
             <span className="font-mono-meta text-xs font-semibold text-[#19C8D8] tracking-widest uppercase">
-              02 / ABOUT
+              02 / ABOUT ME & PHILOSOPHY
             </span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#111111] uppercase tracking-tight max-w-3xl">

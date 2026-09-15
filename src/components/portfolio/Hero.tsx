@@ -25,10 +25,10 @@ export default function Hero() {
     <section className="relative min-h-screen pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden bg-[#F7F7F3] bg-swiss-grid border-b border-[#E5E5E0]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* LEFT COLUMN: EDITORIAL CONTENT */}
           <div className="lg:col-span-6 flex flex-col items-start justify-center z-10">
-            
+
             {/* EYEBROW BADGES */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -172,7 +172,7 @@ export default function Hero() {
       </div>
 
       {/* SUBTLE SCROLL TO EXPLORE INDICATOR */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
@@ -180,9 +180,10 @@ export default function Hero() {
       >
         <span className="font-mono-meta text-[10px] font-bold text-[#707070] tracking-widest uppercase rotate-90 origin-right translate-x-4">
           SCROLL
-        </span>
+        </span>IDEAS INTO
+        EXPERIENCES..
         <div className="w-5 h-9 rounded-full border-2 border-[#111111]/30 p-1 flex justify-center mt-6">
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
             className="w-1.5 h-1.5 rounded-full bg-[#FFB800]"

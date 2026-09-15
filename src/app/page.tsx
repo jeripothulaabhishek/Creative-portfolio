@@ -19,14 +19,14 @@ export default function Home() {
       {/* 01 / HERO WITH 3D CREATIVE STUDIO SCENE */}
       <Hero />
 
-      {/* 02 / MY CREATIVE STACK (18 SKILLS & 3D PILE SHOWCASE) */}
-      <ToolsSection />
+      {/* 02 / ABOUT ABHISHEK & CAPABILITIES */}
+      <AboutIntro />
 
       {/* 03 / WHAT I CREATE (4 EDITORIAL DISCIPLINES) */}
       <WhatICreate />
 
-      {/* 04 / ABOUT ABHISHEK & CAPABILITIES */}
-      <AboutIntro />
+      {/* 04 / MY CREATIVE STACK (18 SKILLS & 3D PILE SHOWCASE) */}
+      <ToolsSection />
 
       {/* 05 / SELECTED WORK MASONRY GRID */}
       <SelectedWork />

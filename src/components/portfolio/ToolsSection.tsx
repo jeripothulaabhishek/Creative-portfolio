@@ -332,7 +332,7 @@ export default function ToolsSection() {
             >
               <Wrench className="w-3.5 h-3.5 text-[#111111]" />
               <span className="font-mono-meta text-xs font-semibold text-[#111111] tracking-widest uppercase">
-                02 / CREATIVE STACK
+                04 / CREATIVE TECH STACK
               </span>
             </motion.div>
             

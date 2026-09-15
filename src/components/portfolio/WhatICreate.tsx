@@ -70,7 +70,7 @@ export default function WhatICreate() {
             >
               <Sparkles className="w-3.5 h-3.5 text-[#FFB800]" />
               <span className="font-mono-meta text-xs font-semibold text-[#111111] tracking-widest uppercase">
-                03 / CAPABILITIES & DISCIPLINES
+                03 / WHAT I CREATE & DISCIPLINES
               </span>
             </motion.div>
 
