@@ -71,25 +71,65 @@ export default function CaseStudies() {
             </div>
           </div>
 
-          {/* EDITORIAL NARRATIVE GRID */}
+          {/* EDITORIAL NARRATIVE GRID: PROBLEM -> IDEA -> EXPERIENCE -> RESULT */}
           <div className="p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-            {/* LEFT: STORY NARRATIVE */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 className="font-display text-2xl font-extrabold text-[#111111] uppercase mb-4">
-                  THE CHALLENGE & VISION
-                </h3>
-                <p className="text-[#707070] text-base leading-relaxed mb-6">
-                  Architecting an authoritative visual identity system aligned strictly with global TEDx brand guidelines, while creating a distinctive visual narrative for TEDx ACE Engineering College 2026.
-                </p>
+            {/* LEFT: STORY NARRATIVE IN 4 CHAPTERS */}
+            <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                {/* 01 / THE PROBLEM */}
+                <div className="bg-[#F7F7F3] p-6 rounded-2xl border border-[#E5E5E0]">
+                  <span className="font-mono-meta text-[11px] font-bold text-[#E50914] uppercase tracking-wider block mb-2">
+                    01 / THE PROBLEM
+                  </span>
+                  <h4 className="font-display text-lg font-bold text-[#111111] mb-2">
+                    IDENTITY VS GLOBAL STANDARDS
+                  </h4>
+                  <p className="text-[#707070] text-sm leading-relaxed">
+                    How do you turn a major college event into an authoritative visual ecosystem that adheres strictly to global TEDx rules while feeling locally unique and energetic?
+                  </p>
+                </div>
 
-                <h3 className="font-display text-2xl font-extrabold text-[#111111] uppercase mb-4">
-                  DESIGN SYSTEM & APPLICATIONS
-                </h3>
-                <p className="text-[#707070] text-base leading-relaxed mb-6">
-                  Built a high-contrast obsidian and kinetic red visual system featuring bold geometric typography, custom speaker portrait frames, color-coded attendee credential badges, and spatial LED stage visual loops.
-                </p>
+                {/* 02 / THE IDEA */}
+                <div className="bg-[#F7F7F3] p-6 rounded-2xl border border-[#E5E5E0]">
+                  <span className="font-mono-meta text-[11px] font-bold text-[#FFB800] uppercase tracking-wider block mb-2">
+                    02 / THE IDEA
+                  </span>
+                  <h4 className="font-display text-lg font-bold text-[#111111] mb-2">
+                    KINETIC RED & OBSIDIAN
+                  </h4>
+                  <p className="text-[#707070] text-sm leading-relaxed">
+                    Constructing high-contrast obsidian backdrops framed with energetic red light rays, bold display typography, and modular grid frames for every medium.
+                  </p>
+                </div>
+
+                {/* 03 / THE EXPERIENCE */}
+                <div className="bg-[#F7F7F3] p-6 rounded-2xl border border-[#E5E5E0]">
+                  <span className="font-mono-meta text-[11px] font-bold text-[#19C8D8] uppercase tracking-wider block mb-2">
+                    03 / THE EXPERIENCE
+                  </span>
+                  <h4 className="font-display text-lg font-bold text-[#111111] mb-2">
+                    5 INTEGRATED TOUCHPOINTS
+                  </h4>
+                  <p className="text-[#707070] text-sm leading-relaxed">
+                    Brand Identity System → Speaker Reveal Posters → Social Media Carousels → 4K LED Stage Loops → Tactile Delegate Badges & Merchandise.
+                  </p>
+                </div>
+
+                {/* 04 / THE RESULT */}
+                <div className="bg-[#F7F7F3] p-6 rounded-2xl border border-[#E5E5E0]">
+                  <span className="font-mono-meta text-[11px] font-bold text-[#FF6B35] uppercase tracking-wider block mb-2">
+                    04 / THE RESULT
+                  </span>
+                  <h4 className="font-display text-lg font-bold text-[#111111] mb-2">
+                    UNIFIED EVENT PRESENCE
+                  </h4>
+                  <p className="text-[#707070] text-sm leading-relaxed">
+                    Flawless physical & digital synchronization creating a high-impact attendee journey and establishing a benchmark visual standard for the institution.
+                  </p>
+                </div>
+
               </div>
 
               <div className="pt-6 border-t border-[#E5E5E0]">
@@ -103,39 +143,51 @@ export default function CaseStudies() {
               </div>
             </div>
 
-            {/* RIGHT: GALLERY PREVIEWS */}
+            {/* RIGHT: 4 TOUCHPOINT GALLERY PREVIEWS */}
             <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-              <div className="relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
+              <div className="group relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
                 <Image
                   src="/tedx-ace-2026/tedx-2.png"
                   alt="Speaker Showcase Poster"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-2 left-2 bg-[#111111]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-mono-meta font-bold text-white uppercase">
+                  SPEAKER POSTERS
+                </div>
               </div>
-              <div className="relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
+              <div className="group relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
                 <Image
                   src="/tedx-ace-2026/tedx-3.png"
                   alt="Stage Graphics"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-2 left-2 bg-[#111111]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-mono-meta font-bold text-white uppercase">
+                  4K STAGE LOOPS
+                </div>
               </div>
-              <div className="relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
+              <div className="group relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
                 <Image
                   src="/tedx-ace-2026/tedx-4.png"
                   alt="Attendee Badges"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-2 left-2 bg-[#111111]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-mono-meta font-bold text-white uppercase">
+                  DELEGATE BADGES
+                </div>
               </div>
-              <div className="relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
+              <div className="group relative h-48 rounded-2xl overflow-hidden bg-[#111111] border border-[#E5E5E0]">
                 <Image
                   src="/tedx-ace-2026/tedx-5.png"
                   alt="Social Media Campaign"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-2 left-2 bg-[#111111]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-mono-meta font-bold text-white uppercase">
+                  SOCIAL CAMPAIGNS
+                </div>
               </div>
             </div>
 

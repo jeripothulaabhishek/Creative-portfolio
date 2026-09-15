@@ -38,8 +38,8 @@ export default function Hero() {
             >
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E5E0] shadow-xs">
                 <Sparkle3D className="w-4 h-4" />
-                <span className="font-mono-meta text-xs font-semibold text-[#111111] tracking-wider uppercase">
-                  01 / VISUAL CREATIVE • GRAPHIC DESIGNER
+                <span className="font-mono-meta text-xs font-bold text-[#111111] tracking-wider uppercase">
+                  01 / DESIGNER • DEVELOPER • EXPERIENCE MAKER
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111111] text-white text-[11px] font-mono-meta tracking-wider uppercase">
@@ -58,14 +58,14 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-extrabold text-[#111111] leading-[0.95] tracking-tight uppercase mb-8"
             >
-              DESIGN,
+              I TURN
+              <br />
+              IDEAS INTO
               <br />
               <span className="relative inline-block text-[#111111]">
-                MADE TO
+                EXPERIENCES.
                 <span className="absolute bottom-2 left-0 w-full h-3.5 bg-[#FFB800] -z-10 rounded-sm" />
               </span>
-              <br />
-              MOVE.
             </motion.h1>
 
             {/* SUPPORTING POSITIONING STATEMENT */}
@@ -75,31 +75,60 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-[#707070] font-normal leading-relaxed max-w-xl mb-10"
             >
-              I craft visual identities people notice — and complete digital experiences they remember. Specializing in brand architecture, UI/UX interfaces, responsive websites, high-converting social campaigns, and motion graphics.
+              <span className="font-bold text-[#111111]">Visual designer × UI/UX designer × frontend developer.</span> Building brand identities, intuitive interfaces, responsive websites, and digital experiences people remember.
             </motion.p>
 
-            {/* ACTION BUTTONS */}
+            {/* ACTION BUTTONS & 3-PATH ORIENTATION NAV */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-12"
+              className="flex flex-col gap-6 w-full mb-12"
             >
-              <Link
-                href="#work"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FFB800] text-[#111111] hover:bg-[#111111] hover:text-[#FFB800] font-display font-bold text-sm px-8 py-4 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <span>EXPLORE WORK</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+                <Link
+                  href="#work"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FFB800] text-[#111111] hover:bg-[#111111] hover:text-[#FFB800] font-display font-bold text-sm px-8 py-4 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <span>EXPLORE WORK</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
 
-              <Link
-                href="#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#111111] text-white hover:bg-[#FFB800] hover:text-[#111111] font-display font-bold text-sm px-8 py-4 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <span>LET'S BUILD</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <Link
+                  href="#contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#111111] text-white hover:bg-[#FFB800] hover:text-[#111111] font-display font-bold text-sm px-8 py-4 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <span>LET'S BUILD</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              {/* 3-PATH ORIENTATION CARD SELECTOR (AWARD UX ORIENTATION) */}
+              <div className="pt-6 border-t border-[#E5E5E0] grid grid-cols-3 gap-3 max-w-xl">
+                <Link
+                  href="#work"
+                  className="group bg-white hover:bg-[#111111] border border-[#E5E5E0] p-3.5 rounded-2xl transition-all duration-300 flex flex-col justify-between"
+                >
+                  <span className="font-mono-meta text-[10px] font-bold text-[#FFB800] tracking-widest block">01 / PATH</span>
+                  <span className="font-display font-extrabold text-xs sm:text-sm text-[#111111] group-hover:text-white uppercase transition-colors">SELECTED WORK</span>
+                </Link>
+
+                <Link
+                  href="#archive"
+                  className="group bg-white hover:bg-[#111111] border border-[#E5E5E0] p-3.5 rounded-2xl transition-all duration-300 flex flex-col justify-between"
+                >
+                  <span className="font-mono-meta text-[10px] font-bold text-[#19C8D8] tracking-widest block">02 / PATH</span>
+                  <span className="font-display font-extrabold text-xs sm:text-sm text-[#111111] group-hover:text-white uppercase transition-colors">EXPERIMENTS</span>
+                </Link>
+
+                <Link
+                  href="#about"
+                  className="group bg-white hover:bg-[#111111] border border-[#E5E5E0] p-3.5 rounded-2xl transition-all duration-300 flex flex-col justify-between"
+                >
+                  <span className="font-mono-meta text-[10px] font-bold text-[#FF6B35] tracking-widest block">03 / PATH</span>
+                  <span className="font-display font-extrabold text-xs sm:text-sm text-[#111111] group-hover:text-white uppercase transition-colors">WHO I AM</span>
+                </Link>
+              </div>
             </motion.div>
 
             {/* CREDIBILITY METRICS STRIP */}
@@ -107,7 +136,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="pt-8 border-t border-[#E5E5E0] w-full grid grid-cols-2 sm:grid-cols-4 gap-6"
+              className="pt-6 border-t border-[#E5E5E0] w-full grid grid-cols-2 sm:grid-cols-4 gap-6"
             >
               <div>
                 <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">50+</span>

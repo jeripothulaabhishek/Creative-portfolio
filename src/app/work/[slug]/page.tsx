@@ -148,25 +148,25 @@ export default async function ProjectPage({
           {/* RIGHT: NARRATIVE & HIGH-RES GALLERY */}
           <div className="lg:col-span-8 flex flex-col gap-12">
             
-            {/* OVERVIEW */}
+            {/* OVERVIEW & PROBLEM */}
             <div className="bg-white border border-[#E5E5E0] rounded-3xl p-8 shadow-xs">
-              <span className="font-mono-meta text-xs font-bold text-[#FFB800] uppercase tracking-wider block mb-2">
-                01 / OVERVIEW
+              <span className="font-mono-meta text-xs font-bold text-[#E50914] uppercase tracking-wider block mb-2">
+                01 / THE PROBLEM & OBJECTIVE
               </span>
-              <h2 className="font-display text-2xl font-bold text-[#111111] mb-4">
-                THE OBJECTIVE & VISION
+              <h2 className="font-display text-2xl font-bold text-[#111111] mb-4 uppercase">
+                {project.title} — CHALLENGE STATEMENT
               </h2>
               <p className="text-[#707070] text-base leading-relaxed">
                 {project.content?.overview || project.description}
               </p>
             </div>
 
-            {/* CHALLENGE & SOLUTION */}
+            {/* THE IDEA & THE SOLUTION */}
             {project.content && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white border border-[#E5E5E0] rounded-3xl p-8 shadow-xs">
-                  <span className="font-mono-meta text-xs font-bold text-[#FF6B35] uppercase tracking-wider block mb-2">
-                    02 / THE CHALLENGE
+                  <span className="font-mono-meta text-xs font-bold text-[#FFB800] uppercase tracking-wider block mb-2">
+                    02 / THE IDEA & CHALLENGE
                   </span>
                   <p className="text-[#707070] text-sm leading-relaxed">
                     {project.content.challenge}
@@ -175,12 +175,24 @@ export default async function ProjectPage({
 
                 <div className="bg-white border border-[#E5E5E0] rounded-3xl p-8 shadow-xs">
                   <span className="font-mono-meta text-xs font-bold text-[#19C8D8] uppercase tracking-wider block mb-2">
-                    03 / THE SOLUTION
+                    03 / THE EXPERIENCE & SOLUTION
                   </span>
                   <p className="text-[#707070] text-sm leading-relaxed">
                     {project.content.solution}
                   </p>
                 </div>
+              </div>
+            )}
+
+            {/* THE RESULT & IMPACT KEY TAKEAWAY */}
+            {project.content?.keyTakeaway && (
+              <div className="bg-[#111111] text-white border border-[#111111] rounded-3xl p-8 shadow-md">
+                <span className="font-mono-meta text-xs font-bold text-[#FFB800] uppercase tracking-wider block mb-2">
+                  04 / THE RESULT & KEY TAKEAWAY
+                </span>
+                <p className="text-white/90 text-base leading-relaxed font-medium">
+                  "{project.content.keyTakeaway}"
+                </p>
               </div>
             )}
 
