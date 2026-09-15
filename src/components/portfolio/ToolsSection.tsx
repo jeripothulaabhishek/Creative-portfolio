@@ -7,16 +7,12 @@ import {
   Wrench,
   Sparkle,
   X,
-  Layers,
   CheckCircle2,
-  ChevronRight,
-  Zap,
   PlayCircle,
   Code2,
   Palette,
   Flame,
   ArrowUpRight,
-  Cpu,
   Sparkles,
 } from "lucide-react";
 
@@ -47,7 +43,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Keyframe animation, kinetic text overlays, speed ramping, audio sync, and high-engagement short-form video content creation for Instagram Reels, Shorts & TikTok.",
     proficiency: 100,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["TEDx ACE Promo Reels", "Rise Creative Campaign Shorts", "Client Video Ads"],
     iconUrl: "/tools/capcut-3d.jpg",
     accentBg: "bg-[#111111]/10",
@@ -64,7 +60,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Mastery over design tokens, auto-layout 5.0, component variants, and interactive prototype flows for web & mobile applications.",
     proficiency: 100,
-    experience: "4+ Years",
+    experience: "4+ Yrs",
     keyProjects: ["TEDx ACE 2026 Site", "Prime Estates Portal", "This Is It Cafe UI"],
     iconUrl: "/tools/figma-3d.png",
     accentBg: "bg-[#FFB800]/10",
@@ -81,7 +77,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Advanced frequency separation, complex masking, color grading, and hyper-realistic visual synthesis for marketing campaigns.",
     proficiency: 100,
-    experience: "5+ Years",
+    experience: "5+ Yrs",
     keyProjects: ["TEDx Speaker Key Visuals", "Kinetix Sportswear Ads", "Rise Creative Posters"],
     iconUrl: "/tools/photoshop-3d.png",
     accentBg: "bg-[#31A8FF]/10",
@@ -98,7 +94,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Bezier curve precision, grid-aligned logo construction, brand book generation, and print-ready CMYK vector assets.",
     proficiency: 100,
-    experience: "5+ Years",
+    experience: "5+ Yrs",
     keyProjects: ["MGR Constructions Brand Identity", "Swapna Catering Visual System", "Keesari Hospital Identity"],
     iconUrl: "/tools/illustrator-3d.png",
     accentBg: "bg-[#FF6B35]/10",
@@ -115,7 +111,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Streamlined brand kit maintenance, collaborative team templates, and high-velocity social media output.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["Swapna Catering Daily Content", "TEDx Social Carousels"],
     iconUrl: "/tools/canva-3d.png",
     accentBg: "bg-[#00C4CC]/10",
@@ -132,7 +128,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Complex expression scripts, 3D camera tracker integration, Lottie JSON animation exports, and fluid keyframing.",
     proficiency: 90,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["TEDx Stage Backdrop Motion", "Logo Ident Animations"],
     iconUrl: "/tools/after-effects-3d.png",
     accentBg: "bg-[#8E2DE2]/10",
@@ -149,9 +145,9 @@ const SKILLS: SkillItem[] = [
     details:
       "Narrative pacing, dialogue cleanup, multi-track audio mastering, and broadcast-ready H.264/HEVC video production.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["TEDx Keynote Recap Video", "Brand Story Documentaries"],
-    iconUrl: "/tools/capcut-3d.jpg",
+    iconUrl: "/tools/camera-3d.jpg",
     accentBg: "bg-[#EA384D]/10",
     accentBorder: "border-[#EA384D]/30",
     accentText: "text-[#EA384D]",
@@ -166,7 +162,7 @@ const SKILLS: SkillItem[] = [
     details:
       "WCAG 2.1 compliance, WAI-ARIA roles, schema.org structured data, and flawless document outline architecture.",
     proficiency: 100,
-    experience: "4+ Years",
+    experience: "4+ Yrs",
     keyProjects: ["All Client Web Applications"],
     iconUrl: "/tools/vscode-3d.png",
     accentBg: "bg-[#E34F26]/10",
@@ -183,7 +179,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Container queries, CSS custom properties, GPU-accelerated keyframes, and Tailwind CSS utility architectures.",
     proficiency: 100,
-    experience: "4+ Years",
+    experience: "4+ Yrs",
     keyProjects: ["Portfolio Design Tokens", "Prime Estates UI Theme"],
     iconUrl: "/tools/vscode-3d.png",
     accentBg: "bg-[#1572B6]/10",
@@ -200,7 +196,7 @@ const SKILLS: SkillItem[] = [
     details:
       "ES6+ syntax, custom event dispatchers, IntersectionObservers, web workers, and smooth math interpolation.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["Dynamic Carousel Engines", "Interactive Canvas Visuals"],
     iconUrl: "/tools/vscode-3d.png",
     accentBg: "bg-[#F7DF1E]/10",
@@ -217,7 +213,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Virtual DOM optimizations, useMemo/useCallback memoization, Context API, and Framer Motion integration.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["Portfolio Web Application", "Client Dashboards"],
     iconUrl: "/tools/react-next-3d.png",
     accentBg: "bg-[#61DAFB]/10",
@@ -234,7 +230,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Server Components, dynamic metadata generation, image optimization, dynamic imports, and Vercel edge deployment.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["Graphic Design Portfolio", "Keesari Hospital Portal"],
     iconUrl: "/tools/react-next-3d.png",
     accentBg: "bg-[#111111]/10",
@@ -251,7 +247,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Strict null checks, complex union generics, discriminated unions, and compile-time error elimination.",
     proficiency: 90,
-    experience: "2+ Years",
+    experience: "2+ Yrs",
     keyProjects: ["Portfolio Data Models", "Dynamic Project Routing"],
     iconUrl: "/tools/vscode-3d.png",
     accentBg: "bg-[#3178C6]/10",
@@ -268,7 +264,7 @@ const SKILLS: SkillItem[] = [
     details:
       "WebGL canvas rendering, GLTF asset pipelines, directional lighting math, orbit controls, and smooth frame loops.",
     proficiency: 85,
-    experience: "2+ Years",
+    experience: "2+ Yrs",
     keyProjects: ["3D Hero Creative Studio Scene", "Interactive Portfolio Objects"],
     iconUrl: "/tools/palette-3d.jpg",
     accentBg: "bg-[#111111]/10",
@@ -285,9 +281,9 @@ const SKILLS: SkillItem[] = [
     details:
       "Advanced prompt parameters, style references (--sref), character consistency, aspect ratio manipulation, and upscale workflow.",
     proficiency: 95,
-    experience: "2+ Years",
+    experience: "2+ Yrs",
     keyProjects: ["Concept Poster Ideation", "Futuristic Visual Backgrounds"],
-    iconUrl: "/tools/photoshop-3d.png",
+    iconUrl: "/tools/midjourney-3d.png",
     accentBg: "bg-[#FFB800]/10",
     accentBorder: "border-[#FFB800]/30",
     accentText: "text-[#FFB800]",
@@ -302,7 +298,7 @@ const SKILLS: SkillItem[] = [
     details:
       "Strategic prompt crafting, brand messaging refinement, content structuring, and rapid technical documentation.",
     proficiency: 100,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["TEDx Brand Narrative", "Client Case Study Copywriting"],
     iconUrl: "/tools/canva-3d.png",
     accentBg: "bg-[#10A37F]/10",
@@ -319,9 +315,9 @@ const SKILLS: SkillItem[] = [
     details:
       "Positioning strategy, color theory architecture, brand tone of voice, and multi-channel asset handoff kits.",
     proficiency: 100,
-    experience: "5+ Years",
+    experience: "5+ Yrs",
     keyProjects: ["MGR Constructions", "Swapna Catering", "Rise Creative"],
-    iconUrl: "/tools/illustrator-3d.png",
+    iconUrl: "/tools/palette-3d.jpg",
     accentBg: "bg-[#FFB800]/10",
     accentBorder: "border-[#FFB800]/30",
     accentText: "text-[#FFB800]",
@@ -336,9 +332,9 @@ const SKILLS: SkillItem[] = [
     details:
       "2D/3D visual rhythm, lower third graphics, social ad intros, and animated campaign teasers.",
     proficiency: 95,
-    experience: "3+ Years",
+    experience: "3+ Yrs",
     keyProjects: ["TEDx Event Key Visuals", "Rise Creative Reels"],
-    iconUrl: "/tools/capcut-3d.jpg",
+    iconUrl: "/tools/ui-ux-3d.jpg",
     accentBg: "bg-[#111111]/10",
     accentBorder: "border-[#111111]/30",
     accentText: "text-[#111111]",
@@ -372,7 +368,7 @@ export default function ToolsSection() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#FFB800]/10 rounded-full blur-[160px] pointer-events-none -z-10" />
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        {/* SECTION HEADER & REFINED HORIZONTAL FILTER BAR */}
+        {/* SECTION HEADER & SLEEK SINGLE-ROW FILTER BAR */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
           <div>
             <motion.div
@@ -408,12 +404,12 @@ export default function ToolsSection() {
             </motion.p>
           </div>
 
-          {/* ULTRA-SLEEK FILTER TAB PILLS WITH ANIMATED SLIDER */}
+          {/* SINGLE-LINE SLEEK FILTER TABS WITH SCROLLING AND ANIMATED SLIDER */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap items-center gap-2 bg-white/90 p-2 rounded-2xl border border-[#E5E5E0] shadow-card backdrop-blur-md self-start lg:self-end max-w-full"
+            className="flex items-center gap-1.5 bg-white p-1.5 rounded-full border border-[#E5E5E0] shadow-xs max-w-full overflow-x-auto no-scrollbar scrollbar-none self-start lg:self-end"
           >
             {STACK_FILTERS.map((tab) => {
               const isActive = activeTab === tab.id;
@@ -422,7 +418,7 @@ export default function ToolsSection() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl font-mono-meta text-xs font-bold tracking-wider transition-all duration-300 ${
+                  className={`relative flex items-center gap-2 px-3.5 py-2 rounded-full font-mono-meta text-[11px] font-bold tracking-wider transition-all duration-300 whitespace-nowrap ${
                     isActive
                       ? "text-[#111111]"
                       : "text-[#707070] hover:text-[#111111] hover:bg-[#F7F7F3]"
@@ -431,7 +427,7 @@ export default function ToolsSection() {
                   {isActive && (
                     <motion.div
                       layoutId="stackFilterActive"
-                      className="absolute inset-0 bg-[#FFB800] rounded-xl shadow-xs"
+                      className="absolute inset-0 bg-[#FFB800] rounded-full shadow-xs"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -439,7 +435,7 @@ export default function ToolsSection() {
                     <TabIcon className="w-3.5 h-3.5" />
                     <span>{tab.label}</span>
                     <span
-                      className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                      className={`text-[9px] px-1.5 py-0.2 rounded-full font-mono-meta font-extrabold ${
                         isActive
                           ? "bg-[#111111] text-white"
                           : "bg-[#F7F7F3] text-[#707070]"
@@ -485,14 +481,14 @@ export default function ToolsSection() {
 
                 <div>
                   {/* TOP HEADER ROW: CATEGORY + 3D GLOSSY APP ICON */}
-                  <div className="flex justify-between items-start mb-6">
-                    <span className="font-mono-meta text-[10px] font-bold text-[#FFB800] bg-[#FFB800]/10 border border-[#FFB800]/30 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  <div className="flex justify-between items-start mb-6 gap-2">
+                    <span className="font-mono-meta text-[10px] font-bold text-[#FFB800] bg-[#FFB800]/10 border border-[#FFB800]/30 px-2.5 py-1 rounded-full uppercase tracking-wider truncate max-w-[70%]">
                       {skill.category}
                     </span>
 
                     {/* 3D APP ICON WITH ACCENT BORDER & SHADOW */}
                     <div
-                      className={`w-14 h-14 rounded-2xl p-1.5 flex items-center justify-center border shadow-xs transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${skill.accentBg} ${skill.accentBorder}`}
+                      className={`w-14 h-14 shrink-0 rounded-2xl p-1.5 flex items-center justify-center border shadow-xs transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${skill.accentBg} ${skill.accentBorder}`}
                     >
                       <Image
                         src={skill.iconUrl}
@@ -507,7 +503,7 @@ export default function ToolsSection() {
                   {/* TOOL TITLE & DESCRIPTION */}
                   <h3 className="font-display text-xl font-extrabold text-[#111111] mb-2 tracking-tight group-hover:text-[#FFB800] transition-colors flex items-center justify-between">
                     <span>{skill.name}</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#111111] opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight className="w-4 h-4 text-[#111111] opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
                   </h3>
 
                   <p className="text-[#707070] text-xs leading-relaxed mb-6 line-clamp-2">
@@ -515,23 +511,20 @@ export default function ToolsSection() {
                   </p>
                 </div>
 
-                {/* BOTTOM METRICS: PROFICIENCY METER & EXPERIENCE */}
-                <div className="pt-4 border-t border-[#E5E5E0] flex flex-col gap-2.5">
-                  {/* ANIMATED PROFICIENCY PROGRESS BAR */}
-                  <div className="w-full">
-                    <div className="flex justify-between items-center text-[10px] font-mono-meta mb-1">
-                      <span className="font-bold text-[#111111]">EXP: {skill.experience}</span>
-                      <span className="font-bold text-[#111111]">{skill.proficiency}% PROFICIENT</span>
-                    </div>
-                    <div className="w-full h-1.5 bg-[#F7F7F3] border border-[#E5E5E0] rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.proficiency}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                        className={`h-full rounded-full bg-gradient-to-r ${skill.barGradient}`}
-                      />
-                    </div>
+                {/* BOTTOM METRICS: PROFICIENCY METER & EXPERIENCE (NO LINE WRAPPING BUG) */}
+                <div className="pt-4 border-t border-[#E5E5E0] flex flex-col gap-2">
+                  <div className="flex justify-between items-center text-[11px] font-mono-meta whitespace-nowrap">
+                    <span className="font-bold text-[#707070] uppercase">EXP: {skill.experience}</span>
+                    <span className="font-extrabold text-[#111111]">{skill.proficiency}% PROFICIENT</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-[#F7F7F3] border border-[#E5E5E0] rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.proficiency}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, ease: "easeOut" }}
+                      className={`h-full rounded-full bg-gradient-to-r ${skill.barGradient}`}
+                    />
                   </div>
                 </div>
               </motion.div>
