@@ -394,13 +394,13 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
       },
       {
         id: "social-2",
-        slug: "kinetix-growth-carousels",
-        title: "Kinetix Digital Growth Series",
+        slug: "brand-growth-carousels",
+        title: "Digital Growth Series",
         subtitle: "Educational Instagram carousels & design tips",
         category: "Social & Ad Creative",
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
         description: "Editorial social carousels breaking down UI/UX principles and brand strategy.",
-        client: "Kinetix",
+        client: "Digital Growth",
         year: "2024",
         role: "Content Creator & Designer",
         deliverables: ["Carousel Series", "Graphic Templates", "Infographics"],
@@ -617,13 +617,13 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
     projects: [
       {
         id: "web-1",
-        slug: "kinetix-agency-platform",
-        title: "Kinetix Digital Platform",
+        slug: "nexus-digital-platform",
+        title: "Nexus Digital Platform",
         subtitle: "Next.js web experience & client dashboard suite",
         category: "Web & Product Design",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
         description: "Full-stack web platform built with Next.js, Tailwind CSS, Framer Motion, and serverless infrastructure.",
-        client: "Kinetix",
+        client: "Nexus Digital",
         year: "2025",
         role: "Lead Full-Stack Developer & UI/UX Architect",
         deliverables: ["Web App", "UI Design System", "Interactive Components", "SEO Engine"],
@@ -631,7 +631,7 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
         gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)",
         featured: true,
         content: {
-          overview: "Abhishek designed and developed the main digital platform for Kinetix, focusing on smooth performance and conversion flow.",
+          overview: "Abhishek designed and developed the main digital platform for Nexus Digital, focusing on smooth performance and conversion flow.",
           challenge: "Creating a blazingly fast web application that presents heavy visual creative portfolios without degrading performance.",
           solution: "Implemented server-side rendering, progressive image loading, glassmorphic UI components, and micro-animations.",
           keyTakeaway: "Design and engineering synergy eliminates the gap between mockup and production site.",
@@ -1194,23 +1194,6 @@ export const CASE_STUDIES = [
     ],
     deliverables: ["Logo System & Mark Variations", "Brand Identity Guidelines", "Digital Ad Campaign Suite", "Social Media Templates"],
     linkText: "View RISE Creative Assets"
-  },
-  {
-    id: "kinetix-case-study",
-    slug: "kinetix-platform",
-    title: "Kinetix Studio — Creative Studio & Digital Architecture",
-    role: "Lead Visual Creative & Technologist",
-    period: "2023 – Present",
-    tagline: "Bridging elite visual graphic design with high-performance Next.js web applications.",
-    coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-    summary: "Engineered the Kinetix brand identity as a full-service creative technology studio. Blending graphic design mastery with modern web engineering to build digital experiences that rank top-tier in design and performance.",
-    metrics: [
-      { label: "Client Satisfaction", value: "100%" },
-      { label: "Lighthouse Score", value: "99/100" },
-      { label: "Projects Completed", value: "30+" }
-    ],
-    deliverables: ["Full Brand Identity System", "Next.js Web Application", "Design System & UI Library", "Client Management Portal"],
-    linkText: "Visit Kinetix Project"
   },
   {
     id: "swapna-catering-case-study",

@@ -20,7 +20,6 @@ export default function SelectedWork() {
   const aiCat = PORTFOLIO_CATEGORIES.find((cat) => cat.id === "ai-creative");
 
   const riseProject = brandingCat?.projects.find((p) => p.id === "brand-1") || brandingCat?.projects[0];
-  const kinetixWebProject = webCat?.projects.find((p) => p.id === "web-1") || webCat?.projects[0];
   const socialCampaignProject = socialCat?.projects[0];
   const aiProject = aiCat?.projects[0];
 
@@ -210,46 +209,7 @@ export default function SelectedWork() {
             </motion.div>
           )}
 
-          {/* 3. MEDIUM PROJECT: KINETIX DIGITAL PLATFORM (SPAN 5) */}
-          {kinetixWebProject && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5 group bg-white border border-[#E5E5E0] rounded-3xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-300 flex flex-col justify-between"
-            >
-              <Link href={`/work/${kinetixWebProject.slug}`}>
-                <div className="relative h-72 sm:h-96 overflow-hidden bg-[#111111]">
-                  <Image
-                    src={kinetixWebProject.image}
-                    alt={kinetixWebProject.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#111111] font-mono-meta text-xs font-bold shadow-sm">
-                      {kinetixWebProject.category}
-                    </span>
-                  </div>
-                </div>
 
-                <div className="p-6 md:p-8">
-                  <div className="flex items-center justify-between font-mono-meta text-xs text-[#707070] mb-2">
-                    <span className="font-bold text-[#19C8D8]">{kinetixWebProject.client}</span>
-                    <span>{kinetixWebProject.year}</span>
-                  </div>
-                  <h4 className="font-display text-2xl font-bold text-[#111111] uppercase tracking-tight group-hover:text-[#19C8D8] transition-colors flex items-center justify-between">
-                    <span>{kinetixWebProject.title}</span>
-                    <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                  </h4>
-                  <p className="text-[#707070] text-sm mt-2 line-clamp-2">
-                    {kinetixWebProject.subtitle || kinetixWebProject.description}
-                  </p>
-                </div>
-              </Link>
-            </motion.div>
-          )}
 
           {/* 4. SWAPNA CATERING INTERACTIVE MENU BOOK (SPAN 6) */}
           <motion.div

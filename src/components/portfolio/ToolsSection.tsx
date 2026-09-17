@@ -196,7 +196,7 @@ const SKILLS: SkillItem[] = [
       "Server Components, dynamic metadata generation, image optimization, dynamic imports, and Vercel edge deployment.",
     proficiency: 90,
     experience: "2+ Yrs",
-    keyProjects: ["Graphic Design Portfolio", "Kinetix Digital Platform"],
+    keyProjects: ["Graphic Design Portfolio", "Swapna Catering Interactive Menu Book"],
     iconUrl: "/tools/react-next-3d.png",
     accentBg: "bg-[#111111]/10",
     accentBorder: "border-[#111111]/30",
