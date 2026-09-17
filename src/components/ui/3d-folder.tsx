@@ -24,6 +24,9 @@ export default function VisualArchive() {
   const [activePosterLightbox, setActivePosterLightbox] = useState<ProjectItem | null>(null);
 
   // Map portfolio data into manufactured 3D archive folders
+  const brandingProjects = PORTFOLIO_CATEGORIES.find((c) => c.id === "branding")?.projects || [];
+  const socialProjects = PORTFOLIO_CATEGORIES.find((c) => c.id === "social")?.projects || [];
+
   const FOLDERS: ArchiveFolderItem[] = [
     {
       id: "filimy-posters",
@@ -48,26 +51,15 @@ export default function VisualArchive() {
       projects: PORTFOLIO_CATEGORIES.find((c) => c.id === "tedx-ace-2026")?.projects || [],
     },
     {
-      id: "branding",
-      name: "BRANDING",
-      category: "VISUAL IDENTITY & COLLATERAL",
-      year: "2025",
-      count: 5,
+      id: "branding-social",
+      name: "BRANDING & SOCIAL CAMPAIGN",
+      category: "RISE MEDIA & VIDHARA CREATIVES",
+      year: "2026",
+      count: brandingProjects.length + socialProjects.length + 6,
       color: "bg-white text-[#111111] border-[#E5E5E0]",
       tabColor: "bg-[#19C8D8] text-white",
-      badge: "IDENTITY",
-      projects: PORTFOLIO_CATEGORIES.find((c) => c.id === "branding")?.projects || [],
-    },
-    {
-      id: "social",
-      name: "SOCIAL",
-      category: "CAMPAIGNS & AD CREATIVE",
-      year: "2025",
-      count: 5,
-      color: "bg-white text-[#111111] border-[#E5E5E0]",
-      tabColor: "bg-[#FF6B35] text-white",
       badge: "CAMPAIGNS",
-      projects: PORTFOLIO_CATEGORIES.find((c) => c.id === "social")?.projects || [],
+      projects: [...brandingProjects, ...socialProjects],
     },
     {
       id: "web",
@@ -76,19 +68,19 @@ export default function VisualArchive() {
       year: "2025",
       count: PORTFOLIO_CATEGORIES.find((c) => c.id === "web-showcase")?.projects.length || 3,
       color: "bg-white text-[#111111] border-[#E5E5E0]",
-      tabColor: "bg-[#19C8D8] text-white",
+      tabColor: "bg-[#FFB800] text-[#111111]",
       badge: "LIVE WEBSITES",
       projects: PORTFOLIO_CATEGORIES.find((c) => c.id === "web-showcase")?.projects || [],
     },
     {
-      id: "experimental",
-      name: "EXPERIMENTAL & AI",
-      category: "AI & TYPOGRAPHY CONCEPTS",
+      id: "event-flyers",
+      name: "EVENT FLYERS & INVITATION DESIGN",
+      category: "EVENT FLYERS, POSTERS & INVITATIONS",
       year: "2026",
       count: 5,
       color: "bg-white text-[#111111] border-[#E5E5E0]",
-      tabColor: "bg-[#19C8D8] text-white",
-      badge: "CONCEPTS",
+      tabColor: "bg-[#FF6B35] text-white",
+      badge: "EVENTS",
       projects: PORTFOLIO_CATEGORIES.find((c) => c.id === "ai-creative")?.projects || [],
     },
   ];
