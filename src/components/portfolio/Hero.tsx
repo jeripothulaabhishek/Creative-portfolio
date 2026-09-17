@@ -139,16 +139,16 @@ export default function Hero() {
               className="pt-6 border-t border-[#E5E5E0] w-full grid grid-cols-2 sm:grid-cols-4 gap-6"
             >
               <div>
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">50+</span>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">20+</span>
                 <span className="block font-mono-meta text-[11px] text-[#707070] uppercase tracking-wider font-medium mt-0.5">Projects Completed</span>
               </div>
               <div>
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">20+</span>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">8+</span>
                 <span className="block font-mono-meta text-[11px] text-[#707070] uppercase tracking-wider font-medium mt-0.5">Happy Clients</span>
               </div>
               <div>
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">3+</span>
-                <span className="block font-mono-meta text-[11px] text-[#707070] uppercase tracking-wider font-medium mt-0.5">Years Learning</span>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">2+</span>
+                <span className="block font-mono-meta text-[11px] text-[#707070] uppercase tracking-wider font-medium mt-0.5">Years Experience</span>
               </div>
               <div>
                 <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#111111]">∞</span>

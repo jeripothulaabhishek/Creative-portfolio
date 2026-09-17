@@ -251,79 +251,90 @@ export default function SelectedWork() {
             </motion.div>
           )}
 
-          {/* 4. SOCIAL CAMPAIGNS PROJECT: RISE CREATIVE AD CAMPAIGNS (SPAN 6) */}
-          {socialCampaignProject && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="lg:col-span-6 group bg-white border border-[#E5E5E0] rounded-3xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-300"
-            >
-              <Link href={`/work/${socialCampaignProject.slug}`}>
-                <div className="relative h-64 sm:h-80 overflow-hidden bg-[#0A0A0E] flex items-center justify-center">
-
-                  {/* AMBIENT BACKGROUND GLOW DERIVED FROM AD IMAGE */}
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                    <Image
-                      src={socialCampaignProject.image}
-                      alt=""
-                      fill
-                      className="object-cover blur-3xl opacity-45 scale-125 brightness-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0E]/80 via-transparent to-[#0A0A0E]/30" />
-                  </div>
-
-                  <Image
-                    src={socialCampaignProject.image}
-                    alt={socialCampaignProject.title}
-                    fill
-                    className="relative z-10 object-contain p-4 filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="font-mono-meta text-xs text-[#FF6B35] font-bold uppercase tracking-wider block mb-1">
-                    {socialCampaignProject.category}
+          {/* 4. SWAPNA CATERING INTERACTIVE MENU BOOK (SPAN 6) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="lg:col-span-6 group bg-white border border-[#E5E5E0] rounded-3xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-300"
+          >
+            <Link href="#swapna-catering-menu">
+              <div className="relative h-64 sm:h-80 overflow-hidden bg-[#FAF9F5] flex items-center justify-center">
+                <Image
+                  src="/catering-menu/catering-thumbnail.webp"
+                  alt="Swapna Catering Menu Design"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out p-2"
+                />
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="px-3.5 py-1.5 rounded-full bg-[#111111]/80 backdrop-blur-md text-[#FFB800] font-mono-meta text-xs font-bold shadow-sm">
+                    CATERING MENU & PRINT
                   </span>
-                  <h4 className="font-display text-xl font-bold text-[#111111] group-hover:text-[#FF6B35] transition-colors flex items-center justify-between">
-                    <span>{socialCampaignProject.title}</span>
-                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </h4>
                 </div>
-              </Link>
-            </motion.div>
-          )}
+              </div>
+              <div className="p-6">
+                <span className="font-mono-meta text-xs text-[#FF6B35] font-bold uppercase tracking-wider block mb-1">
+                  Swapna Catering
+                </span>
+                <h4 className="font-display text-xl font-bold text-[#111111] group-hover:text-[#FF6B35] transition-colors flex items-center justify-between">
+                  <span>SWAPNA CATERING MENU BOOK</span>
+                  <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                </h4>
+                <p className="text-[#707070] text-sm mt-1 line-clamp-2 font-sans">
+                  5-page editorial menu design with interactive 3D publication physics.
+                </p>
+              </div>
+            </Link>
+          </motion.div>
 
-          {/* 5. AI CREATIVE CONCEPT (SPAN 6) */}
-          {aiProject && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:col-span-6 group bg-white border border-[#E5E5E0] rounded-3xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-300"
-            >
-              <Link href={`/work/${aiProject.slug}`}>
-                <div className="relative h-64 sm:h-80 overflow-hidden bg-[#111111]">
+          {/* 5. VIDHARA SOCIAL MEDIA CAMPAIGN (SPAN 6) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="lg:col-span-6 group bg-white border border-[#E5E5E0] rounded-3xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-300"
+          >
+            <Link href="#vidhara-case-study">
+              <div className="relative h-64 sm:h-80 overflow-hidden bg-[#0A0A0E] flex items-center justify-center">
+                {/* Ambient glow */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                   <Image
-                    src={aiProject.image}
-                    alt={aiProject.title}
+                    src="/projects/vidhara/creative-01.webp"
+                    alt=""
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-cover blur-2xl opacity-40 scale-125"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0E]/80 via-transparent to-[#0A0A0E]/30" />
                 </div>
-                <div className="p-6">
-                  <span className="font-mono-meta text-xs text-[#19C8D8] font-bold uppercase tracking-wider block mb-1">
-                    {aiProject.category}
+
+                <Image
+                  src="/projects/vidhara/creative-01.webp"
+                  alt="Vidhara Social Media Creative Campaign"
+                  fill
+                  className="relative z-10 object-contain p-4 filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#111111] font-mono-meta text-xs font-bold shadow-sm">
+                    SOCIAL MEDIA CAMPAIGN
                   </span>
-                  <h4 className="font-display text-xl font-bold text-[#111111] group-hover:text-[#19C8D8] transition-colors flex items-center justify-between">
-                    <span>{aiProject.title}</span>
-                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </h4>
                 </div>
-              </Link>
-            </motion.div>
-          )}
+              </div>
+              <div className="p-6">
+                <span className="font-mono-meta text-xs text-[#19C8D8] font-bold uppercase tracking-wider block mb-1">
+                  Vidhara
+                </span>
+                <h4 className="font-display text-xl font-bold text-[#111111] group-hover:text-[#19C8D8] transition-colors flex items-center justify-between">
+                  <span>VIDHARA CREATIVE CAMPAIGN</span>
+                  <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                </h4>
+                <p className="text-[#707070] text-sm mt-1 line-clamp-2 font-sans">
+                  Visual storytelling campaign blending typography with cultural motifs.
+                </p>
+              </div>
+            </Link>
+          </motion.div>
 
         </div>
 
