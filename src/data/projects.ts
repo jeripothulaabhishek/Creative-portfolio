@@ -1228,6 +1228,24 @@ export const CASE_STUDIES = [
     ],
     deliverables: ["5-Page Editorial Menu Artwork", "Custom 3D Digital Book Viewer", "Fullscreen Reader Experience", "Mobile Touch Swipe Integration"],
     linkText: "Explore Menu Book"
+  },
+  {
+    id: "vidhara-case-study",
+    slug: "vidhara-social-campaign",
+    title: "Vidhara — Social Media Creative Campaign",
+    role: "Graphic Designer",
+    period: "2026",
+    tagline: "Building a distinctive visual language for social media through bold composition, cultural references and brand storytelling.",
+    coverImage: "/projects/vidhara/creative-01.webp",
+    summary: "Designed the complete social media creative campaign suite for Vidhara. Blending cultural motifs with modern typographical rhythm to deliver scroll-stopping Instagram posts.",
+    metrics: [
+      { label: "Campaign Creatives", value: "6 Posts" },
+      { label: "Aspect Ratio", value: "4:5 Portrait" },
+      { label: "Render Fidelity", value: "Full HD WebP" }
+    ],
+    deliverables: ["Instagram Posts", "Campaign Creatives", "Brand Content", "Custom Lightbox Gallery"],
+    linkText: "Explore Vidhara Campaign"
   }
 ];
+
 

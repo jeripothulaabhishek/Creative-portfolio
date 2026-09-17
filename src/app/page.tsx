@@ -8,6 +8,7 @@ import WebShowcase from "@/components/portfolio/WebShowcase";
 import MenuBookSection from "@/components/portfolio/MenuBookSection";
 import VisualArchive from "@/components/ui/3d-folder";
 import SocialDesignShowcase from "@/components/portfolio/SocialDesignShowcase";
+import VidharaCaseStudy from "@/components/portfolio/VidharaCaseStudy";
 import CaseStudies from "@/components/portfolio/CaseStudies";
 import ContactFooter from "@/components/portfolio/ContactFooter";
 
@@ -44,10 +45,13 @@ export default function Home() {
       {/* 09 / SOCIAL DESIGN SHOWCASE */}
       <SocialDesignShowcase />
 
-      {/* 10 / FLAGSHIP TEDX CASE STUDY */}
+      {/* 10 / VIDHARA SOCIAL MEDIA CREATIVE CAMPAIGN CASE STUDY */}
+      <VidharaCaseStudy />
+
+      {/* 11 / FLAGSHIP TEDX CASE STUDY */}
       <CaseStudies />
 
-      {/* 11 / CONTACT & MINIMAL FOOTER */}
+      {/* 12 / CONTACT & MINIMAL FOOTER */}
       <ContactFooter />
     </main>
   );
