@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import Sparkle3D from "@/components/ui/Sparkle3D";
 
+import KineticRibbon from "./KineticRibbon";
+
 const HeroScene3D = dynamic(() => import("./HeroScene3D"), {
   ssr: false,
 });
@@ -191,19 +193,8 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* INFINITE MARQUEE TICKER */}
-      <div className="mt-14 w-full bg-[#111111] text-white py-3.5 overflow-hidden border-y border-[#111111]">
-        <div className="flex w-max animate-marquee space-x-8">
-          {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, idx) => (
-            <div key={idx} className="flex items-center space-x-8">
-              <span className="font-mono-meta text-xs font-bold tracking-widest uppercase text-white/90">
-                {item}
-              </span>
-              <span className="text-[#FFB800] text-xs">✦</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* 3D VELOCITY KINETIC SCROLL RIBBON */}
+      <KineticRibbon />
     </section>
   );
 }
