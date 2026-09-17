@@ -1211,5 +1211,23 @@ export const CASE_STUDIES = [
     ],
     deliverables: ["Full Brand Identity System", "Next.js Web Application", "Design System & UI Library", "Client Management Portal"],
     linkText: "Visit Kinetix Project"
+  },
+  {
+    id: "swapna-catering-case-study",
+    slug: "swapna-catering-menu",
+    title: "Swapna Catering — Interactive Digital Menu Book",
+    role: "Lead Editorial & Menu Designer",
+    period: "2026",
+    tagline: "Traditional Indian catering presented as a premium 5-page interactive digital menu experience.",
+    coverImage: "/catering-menu/page-1.webp",
+    summary: "Created the complete visual art direction and 5-page menu book for Swapna Catering. Combining authentic Indian heritage motifs, deep red and gold palettes, structured menu hierarchy, and realistic 3D paper publication physics.",
+    metrics: [
+      { label: "Original Menu Pages", value: "5 Pages" },
+      { label: "Render Fidelity", value: "300 DPI" },
+      { label: "3D Physics", value: "Real Time" }
+    ],
+    deliverables: ["5-Page Editorial Menu Artwork", "Custom 3D Digital Book Viewer", "Fullscreen Reader Experience", "Mobile Touch Swipe Integration"],
+    linkText: "Explore Menu Book"
   }
 ];
+

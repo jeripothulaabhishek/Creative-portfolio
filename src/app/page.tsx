@@ -5,6 +5,7 @@ import WhatICreate from "@/components/portfolio/WhatICreate";
 import AboutIntro from "@/components/portfolio/AboutIntro";
 import SelectedWork from "@/components/portfolio/SelectedWork";
 import WebShowcase from "@/components/portfolio/WebShowcase";
+import MenuBookSection from "@/components/portfolio/MenuBookSection";
 import VisualArchive from "@/components/ui/3d-folder";
 import SocialDesignShowcase from "@/components/portfolio/SocialDesignShowcase";
 import CaseStudies from "@/components/portfolio/CaseStudies";
@@ -34,16 +35,19 @@ export default function Home() {
       {/* 06 / WEBSITES & DIGITAL EXPERIENCES SHOWCASE */}
       <WebShowcase />
 
-      {/* 07 / 3D MANUFACTURED VISUAL ARCHIVE */}
+      {/* 07 / SWAPNA CATERING INTERACTIVE MENU BOOK */}
+      <MenuBookSection />
+
+      {/* 08 / 3D MANUFACTURED VISUAL ARCHIVE */}
       <VisualArchive />
 
-      {/* 08 / SOCIAL DESIGN SHOWCASE */}
+      {/* 09 / SOCIAL DESIGN SHOWCASE */}
       <SocialDesignShowcase />
 
-      {/* 09 / FLAGSHIP TEDX CASE STUDY */}
+      {/* 10 / FLAGSHIP TEDX CASE STUDY */}
       <CaseStudies />
 
-      {/* 10 / CONTACT & MINIMAL FOOTER */}
+      {/* 11 / CONTACT & MINIMAL FOOTER */}
       <ContactFooter />
     </main>
   );
