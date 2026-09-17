@@ -41,7 +41,7 @@ const SKILLS: SkillItem[] = [
     desc: "Design system architecture, wireframing & interactive prototypes.",
     details:
       "Mastery over design tokens, auto-layout 5.0, component variants, and interactive prototype flows for web & mobile applications.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["TEDx ACE 2026 Site", "Rise Creative Identity", "Vidhara Social Kit"],
     iconUrl: "/tools/figma-3d.png",
@@ -58,7 +58,7 @@ const SKILLS: SkillItem[] = [
     desc: "High-end photo manipulation, retouching & digital poster composition.",
     details:
       "Advanced frequency separation, complex masking, color grading, and hyper-realistic visual synthesis for marketing campaigns.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["TEDx Speaker Key Visuals", "Vidhara Campaign Creatives", "Rise Creative Posters"],
     iconUrl: "/tools/photoshop-3d.png",
@@ -66,23 +66,6 @@ const SKILLS: SkillItem[] = [
     accentBorder: "border-[#31A8FF]/30",
     accentText: "text-[#31A8FF]",
     barGradient: "from-[#31A8FF] to-[#0066FF]",
-  },
-  {
-    id: "illustrator",
-    name: "Illustrator",
-    category: "VECTOR & LOGO MARKS",
-    group: "DESIGN",
-    desc: "Precision vector logo marks, typography scales & brand guidelines.",
-    details:
-      "Bezier curve precision, grid-aligned logo construction, brand book generation, and print-ready vector assets.",
-    proficiency: 95,
-    experience: "2+ Yrs",
-    keyProjects: ["Swapna Catering Visual System", "RISE Creative Brand Mark", "TEDx Event Identity"],
-    iconUrl: "/tools/illustrator-3d.png",
-    accentBg: "bg-[#FF6B35]/10",
-    accentBorder: "border-[#FF6B35]/30",
-    accentText: "text-[#FF6B35]",
-    barGradient: "from-[#FF6B35] to-[#FF3B00]",
   },
   {
     id: "canva",
@@ -109,7 +92,7 @@ const SKILLS: SkillItem[] = [
     desc: "Complete visual identity creation, logo systems & brand guidelines.",
     details:
       "Positioning strategy, color theory architecture, brand tone of voice, and multi-channel asset handoff kits.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["Swapna Catering", "Rise Creative", "TEDx ACE 2026"],
     iconUrl: "/tools/palette-3d.jpg",
@@ -126,7 +109,7 @@ const SKILLS: SkillItem[] = [
     desc: "Dynamic short-form video editing, auto-captioning & viral reel pacing.",
     details:
       "Keyframe animation, kinetic text overlays, speed ramping, audio sync, and high-engagement short-form video content creation for Instagram Reels & Shorts.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["TEDx ACE Promo Reels", "Rise Creative Campaign Shorts"],
     iconUrl: "/tools/capcut-3d.jpg",
@@ -143,7 +126,7 @@ const SKILLS: SkillItem[] = [
     desc: "Accessible HTML5 markup, microdata & SEO structural hierarchy.",
     details:
       "WCAG 2.1 compliance, WAI-ARIA roles, schema.org structured data, and document outline architecture.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["Portfolio Web Application", "Client Web Experiences"],
     iconUrl: "/tools/vscode-3d.png",
@@ -160,7 +143,7 @@ const SKILLS: SkillItem[] = [
     desc: "Custom CSS properties, glassmorphism, flexbox & grid design systems.",
     details:
       "CSS custom properties, keyframes, responsive layouts, and Tailwind CSS utility architectures.",
-    proficiency: 95,
+    proficiency: 90,
     experience: "2+ Yrs",
     keyProjects: ["Portfolio Design Tokens", "Interactive Custom Components"],
     iconUrl: "/tools/vscode-3d.png",
@@ -240,8 +223,8 @@ const SKILLS: SkillItem[] = [
 ];
 
 const STACK_FILTERS = [
-  { id: "ALL", label: "ALL 12 SKILLS", count: 12, icon: Sparkle },
-  { id: "DESIGN", label: "UI & BRAND DESIGN", count: 5, icon: Palette },
+  { id: "ALL", label: "ALL 11 SKILLS", count: 11, icon: Sparkle },
+  { id: "DESIGN", label: "UI & BRAND DESIGN", count: 4, icon: Palette },
   { id: "DEV", label: "FRONTEND & WEB DEV", count: 6, icon: Code2 },
   { id: "MOTION", label: "CONTENT & REELS", count: 1, icon: PlayCircle },
 ];
@@ -296,7 +279,7 @@ export default function ToolsSection() {
               transition={{ delay: 0.2 }}
               className="text-base sm:text-lg text-[#707070] font-normal leading-relaxed max-w-xl mt-3"
             >
-              12 core design & web development tools engineered for visual identity, digital graphics, and responsive web products.
+              11 core design & web development tools engineered for visual identity, digital graphics, and responsive web products.
             </motion.p>
           </div>
 
