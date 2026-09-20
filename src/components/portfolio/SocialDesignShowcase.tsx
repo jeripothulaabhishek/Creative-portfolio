@@ -151,7 +151,7 @@ export default function SocialDesignShowcase() {
                   quality={95}
                   sizes="(max-width: 768px) 100vw, 420px"
                   className={`relative z-10 ${
-                    item.image.includes("logo") || item.image.includes("Main logo") || item.image.includes("ad-design") || item.image.includes("AD design")
+                    item.image.includes("logo") || item.image.includes("ad-design")
                       ? "object-contain p-4 filter drop-shadow-xl"
                       : "object-cover"
                   } group-hover:scale-105 transition-transform duration-700 ease-out`}
@@ -159,9 +159,9 @@ export default function SocialDesignShowcase() {
 
                 {/* Aspect Ratio Badge */}
                 <div className="absolute top-3 right-3 bg-[#111111]/85 backdrop-blur-md px-3 py-1 rounded-full font-mono-meta text-[10px] font-bold text-white tracking-wider border border-white/10 shadow-sm">
-                  {item.image.includes("logo") || item.image.includes("Main logo")
+                  {item.image.includes("logo")
                     ? "LOGO & BRAND MARK"
-                    : item.image.includes("ad-design") || item.image.includes("AD design")
+                    : item.image.includes("ad-design")
                     ? "PROMOTIONAL AD DESIGN"
                     : idx % 2 === 0
                     ? "4:5 INSTAGRAM CAROUSEL"

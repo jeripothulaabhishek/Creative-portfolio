@@ -316,7 +316,7 @@ export default async function ProjectPage({
                         fill
                         quality={98}
                         className={`${
-                          imgUrl.includes("logo") || imgUrl.includes("Main logo") || imgUrl.includes("ad-design") || imgUrl.includes("AD design")
+                          imgUrl.includes("logo") || imgUrl.includes("ad-design")
                             ? "object-contain p-4 sm:p-10 filter drop-shadow-2xl max-h-[92%]"
                             : "object-contain sm:object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
                         }`}
