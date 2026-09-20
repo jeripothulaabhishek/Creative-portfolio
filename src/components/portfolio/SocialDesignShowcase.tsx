@@ -1,57 +1,46 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Instagram, ChevronLeft, ChevronRight, Maximize2, X, ArrowUpRight, Sparkles, Layers } from "lucide-react";
+import { Instagram, ChevronLeft, ChevronRight, Maximize2, X, ArrowUpRight } from "lucide-react";
 import Sparkle3D from "@/components/ui/Sparkle3D";
 import { PORTFOLIO_CATEGORIES, ProjectItem } from "@/data/projects";
 
-const FILTER_TAGS = ["ALL", "CAROUSELS", "AD POSTS", "CAMPAIGNS"];
+const FILTER_TAGS = ["ALL", "CAROUSELS", "AD POSTS", "CAMPAIGNS"] as const;
 
 export default function SocialDesignShowcase() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [activeFilter, setActiveFilter] = useState("ALL");
-  const [selectedLightboxProject, setSelectedLightboxProject] = useState<ProjectItem | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeFilter, setActiveFilter] = useState<(typeof FILTER_TAGS)[number]>("ALL");
+  const [lightboxProject, setLightboxProject] = useState<ProjectItem | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  const socialCat = PORTFOLIO_CATEGORIES.find((cat) => cat.id === "social");
-  const allProjects = socialCat?.projects || [];
+  const projects = useMemo(
+    () => PORTFOLIO_CATEGORIES.find((c) => c.id === "social")?.projects || [],
+    []
+  );
 
-  // Filter projects based on active pill
-  const filteredProjects = allProjects.filter((item) => {
-    if (activeFilter === "ALL") return true;
-    if (activeFilter === "CAROUSELS") return item.tags.some((t) => t.toLowerCase().includes("carousel"));
-    if (activeFilter === "AD POSTS") return item.tags.some((t) => t.toLowerCase().includes("ad") || t.toLowerCase().includes("post"));
-    if (activeFilter === "CAMPAIGNS") return item.tags.some((t) => t.toLowerCase().includes("campaign"));
-    return true;
-  });
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "ALL") return projects;
+    const keyMap = { CAROUSELS: "carousel", "AD POSTS": "ad", CAMPAIGNS: "campaign" };
+    const query = keyMap[activeFilter as keyof typeof keyMap];
+    return projects.filter((p) => p.tags.some((t) => t.toLowerCase().includes(query)));
+  }, [projects, activeFilter]);
 
-  // Smooth Horizontal Scroll Functions
+  // ponytail: native scrollBy replaces manual offset calculation
   const scroll = (direction: "left" | "right") => {
-    if (!scrollContainerRef.current) return;
-    const container = scrollContainerRef.current;
-    const scrollAmount = container.clientWidth * 0.75;
-    const targetScroll =
-      direction === "left"
-        ? container.scrollLeft - scrollAmount
-        : container.scrollLeft + scrollAmount;
-
-    container.scrollTo({
-      left: targetScroll,
-      behavior: "smooth",
-    });
+    const el = scrollRef.current;
+    if (!el) return;
+    const delta = el.clientWidth * 0.75;
+    el.scrollBy({ left: direction === "left" ? -delta : delta, behavior: "smooth" });
   };
 
   const handleScroll = () => {
-    if (!scrollContainerRef.current) return;
-    const container = scrollContainerRef.current;
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    if (maxScroll > 0) {
-      const progress = (container.scrollLeft / maxScroll) * 100;
-      setScrollProgress(progress);
-    }
+    const el = scrollRef.current;
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    setScrollProgress(maxScroll > 0 ? (el.scrollLeft / maxScroll) * 100 : 0);
   };
 
   return (
@@ -116,7 +105,7 @@ export default function SocialDesignShowcase() {
 
         {/* SMOOTH SCROLLING GALLERY CONTAINER */}
         <div
-          ref={scrollContainerRef}
+          ref={scrollRef}
           onScroll={handleScroll}
           data-cursor="move"
           className="flex gap-6 overflow-x-auto pb-6 pt-3 scrollbar-none snap-x snap-mandatory cursor-grab active:cursor-grabbing"
@@ -171,7 +160,7 @@ export default function SocialDesignShowcase() {
                 {/* HOVER OVERLAY LIGHTBOX TRIGGER */}
                 <div className="absolute inset-0 bg-[#111111]/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                   <button
-                    onClick={() => setSelectedLightboxProject(item)}
+                    onClick={() => setLightboxProject(item)}
                     className="px-4 py-2.5 rounded-full bg-white text-[#111111] font-mono-meta text-xs font-bold flex items-center gap-2 shadow-xl hover:bg-[#FF6B35] hover:text-white transition-colors transform group-hover:scale-105"
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
@@ -225,13 +214,13 @@ export default function SocialDesignShowcase() {
 
       {/* FULL HIGH-RESOLUTION LIGHTBOX MODAL FOR SOCIAL CREATIVES */}
       <AnimatePresence>
-        {selectedLightboxProject && (
+        {lightboxProject && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-[#090909]/95 backdrop-blur-xl flex flex-col items-center justify-between p-4 sm:p-8"
-            onClick={() => setSelectedLightboxProject(null)}
+            onClick={() => setLightboxProject(null)}
           >
             {/* LIGHTBOX TOP BAR */}
             <div className="w-full max-w-6xl flex items-center justify-between z-10">
@@ -239,16 +228,16 @@ export default function SocialDesignShowcase() {
                 <Sparkle3D className="w-5 h-5" />
                 <div>
                   <h3 className="font-display text-lg font-bold text-white uppercase">
-                    {selectedLightboxProject.title}
+                    {lightboxProject.title}
                   </h3>
                   <span className="font-mono-meta text-xs text-zinc-400">
-                    {selectedLightboxProject.category} • HIGH RESOLUTION CREATIVE
+                    {lightboxProject.category} • HIGH RESOLUTION CREATIVE
                   </span>
                 </div>
               </div>
 
               <button
-                onClick={() => setSelectedLightboxProject(null)}
+                onClick={() => setLightboxProject(null)}
                 className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-[#FF6B35] hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
@@ -261,8 +250,8 @@ export default function SocialDesignShowcase() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={selectedLightboxProject.image}
-                alt={selectedLightboxProject.title}
+                src={lightboxProject.image}
+                alt={lightboxProject.title}
                 fill
                 quality={100}
                 unoptimized
@@ -274,11 +263,11 @@ export default function SocialDesignShowcase() {
             {/* LIGHTBOX FOOTER CAPTION */}
             <div className="w-full max-w-4xl bg-white/10 border border-white/10 backdrop-blur-md rounded-2xl p-4 text-white flex flex-col sm:flex-row items-center justify-between gap-4 z-10">
               <p className="font-mono-meta text-xs text-zinc-300">
-                {selectedLightboxProject.description}
+                {lightboxProject.description}
               </p>
               <Link
-                href={`/work/${selectedLightboxProject.slug}`}
-                onClick={() => setSelectedLightboxProject(null)}
+                href={`/work/${lightboxProject.slug}`}
+                onClick={() => setLightboxProject(null)}
                 className="px-5 py-2.5 rounded-xl bg-[#FF6B35] text-white font-display font-bold text-xs uppercase flex items-center gap-1.5 shadow-md hover:bg-white hover:text-[#111111] transition-colors shrink-0"
               >
                 <span>VIEW CASE STUDY</span>
